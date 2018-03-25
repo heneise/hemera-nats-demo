@@ -1,4 +1,5 @@
 # Hemera NATS Demo
+![example sequence](example.png)
 
 This is an example accompanying an article published here:
 
