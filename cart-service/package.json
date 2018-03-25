@@ -1,0 +1,37 @@
+{
+  "name": "cart-service",
+  "description": "An example of the cart-service",
+  "author": "Heneise Consulting <info@heneise.consulting> (http://heneise.consulting)",
+  "version": "0.0.0-development",
+  "license": "MIT",
+  "contributors": [
+    "Dmitry Zaets (https://github.com/dmitry-zaets)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heneise/hemera-nats-example.git"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "hemera-joi": "^5.1.2",
+    "joi": "^13.1.2",
+    "nats": "^0.8.4",
+    "nats-hemera": "^5.0.0-rc.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.2",
+    "nyc": "^11.6.0",
+    "snazzy": "^7.1.1",
+    "standard": "^11.0.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.9.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "debug": "node --inspect index.js",
+    "quickfix": "standard --fix",
+    "test": "nyc tape -j4 'test/**/*.js' | tap-spec",
+    "precommit": "standard | snazzy"
+  }
+}

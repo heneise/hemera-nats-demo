@@ -1,0 +1,9 @@
+sequenceDiagram
+  participant API
+  participant Cart
+  participant Products
+  API->>Cart: cart.show()
+  Cart->>Products: products.get(id)
+  Products-->>Cart: Return Product Information
+  Cart-->>API: Return cart items with Products
+  
